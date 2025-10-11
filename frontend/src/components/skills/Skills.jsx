@@ -10,7 +10,6 @@ export default function Skills() {
     const [activeTab, setActiveTab] = useState("Languages");
     const tabNames = Object.keys(skillCategories);
 
-    // Map tab names to their icons
     const tabIcons = {
         Languages: <FaCode />,
         Frameworks: <FaLayerGroup />,
