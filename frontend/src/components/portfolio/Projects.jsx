@@ -7,6 +7,11 @@ import { MyContext } from "../../Context/Context";
 const Projects = ({ data }) => {
   const { theme } = useContext(MyContext);
 
+  // Handler to stop event propagation
+  const handleButtonClick = (e) => {
+    e.stopPropagation();
+  };
+
   return (
     <div
       className={`max-w-106 rounded-lg hover:shadow-2xl duration-300 transition-all cursor-pointer ${
@@ -46,6 +51,7 @@ const Projects = ({ data }) => {
           <a
             href={data?.source}
             target="_blank"
+            onClick={handleButtonClick}
             className={`btn hover:border-picto-primary hover:text-picto-primary text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 py-3 px-6 w-full sm:w-auto text-center ${
               theme === 'light' 
                 ? 'bg-white text-black border-gray-300' 
@@ -61,6 +67,7 @@ const Projects = ({ data }) => {
           <a
             href={data?.link}
             target="_blank"
+            onClick={handleButtonClick}
             className={`btn hover:border-picto-primary hover:text-picto-primary text-sm xs:text-[16px] font-semibold hover:gap-3 xs:hover:gap-4 transition-all duration-300 py-3 px-6 w-full sm:w-auto text-center ${
               theme === 'light' 
                 ? 'bg-white text-black border-gray-300' 
