@@ -33,7 +33,7 @@ export default function ProjectDetails() {
                     </li>
                 ))}
             </ul>
-            <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 sm:gap-8 w-full max-w-md sm:max-w-lg mt-5">
+            <div className="flex flex-col sm:flex-row justify-center sm:justify-evenly items-center gap-4 sm:gap-8 w-full max-w-md sm:max-w-lg mt-5">
                 <a
                     href={project?.source}
                     target="_blank"
