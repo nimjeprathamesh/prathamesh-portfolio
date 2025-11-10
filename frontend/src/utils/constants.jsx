@@ -18,12 +18,12 @@ import challenge from "../assets/images/challenges-app.png";
 import food from "../assets/images/food-order.png";
 
 export const navItems = [
-    { id: 1, name: "Home", url: "introduction", icon: <BiHomeAlt fontWeight="bold" /> },
-    { id: 2, name: "About", url: "profile", icon: <BsInfoCircle fontWeight="bold" /> },
-    { id: 3, name: "Skills", url: "skills", icon: <BsTools fontWeight="bold" /> },
-    { id: 4, name: "Experience", url: "work-process", icon: <CgWorkAlt fontWeight="bold" /> },
-    { id: 5, name: "Projects", url: "/projects", icon: <MdOutlineArticle fontWeight="bold" /> },
-    { id: 6, name: "Contact", url: "contact", icon: <MdOutlineContactMail fontWeight="bold" /> },
+    { id: 1, name: "Home", url: "introduction" },
+    { id: 2, name: "About", url: "profile" },
+    { id: 3, name: "Skills", url: "skills" },
+    { id: 4, name: "Experience", url: "work-process" },
+    { id: 5, name: "Projects", url: "/projects" },
+    { id: 6, name: "Contact", url: "contact" },
 ];
 
 export const socialIcons = [
