@@ -1,10 +1,8 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
-import { BiHomeAlt } from "react-icons/bi";
-import { BsFillPeopleFill, BsInfoCircle, BsTools } from "react-icons/bs";
-import { CgWorkAlt } from "react-icons/cg";
+import { BsFillPeopleFill } from "react-icons/bs";
 import { FaCss3Alt, FaGitAlt, FaGithub, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
-import { MdDesignServices, MdOutlineArticle, MdOutlineContactMail } from "react-icons/md";
+import { MdDesignServices } from "react-icons/md";
 import { RiNextjsLine } from "react-icons/ri";
 import { SiBootstrap, SiDigitalocean, SiExpress, SiIndeed, SiJavascript, SiMui, SiMysql, SiNetlify, SiPhpmyadmin, SiPostman, SiTailwindcss, SiVercel, SiVite, SiRender } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
