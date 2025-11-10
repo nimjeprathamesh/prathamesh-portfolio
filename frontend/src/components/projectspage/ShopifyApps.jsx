@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { MyContext } from "../../Context/Context";
 import { shopifyData } from "../../utils/constants";
 import Shopify from "./Shopify";
-
 const ShopifyApps = () => {
     const { theme } = useContext(MyContext);
 
