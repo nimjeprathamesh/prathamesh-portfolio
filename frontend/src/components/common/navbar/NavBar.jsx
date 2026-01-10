@@ -335,7 +335,7 @@ const NavBar = () => {
       initial="hidden"
       animate="visible"
     >
-      <div className="navbar flex justify-between mx-auto content">
+      <div className="navbar flex justify-between mx-auto content p-0">
         {/* Left Section (Logo + Dropdown) */}
         <div className="flex items-center justify-between">
           {/* Mobile Dropdown */}
