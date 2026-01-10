@@ -1,40 +1,129 @@
+import { useContext } from "react";
+import { motion } from "framer-motion";
 import Introduction from "../components/introduction/Introduction";
 import Profile from "../components/profile/Profile";
 import WorkProcess from "../components/workProcess/WorkProcess";
 import Portfolio from "../components/portfolio/Portfolio";
 import Profession from "../components/profession/Profession";
 import Contact from "../components/contact/Contact";
+import Skills from "../components/skills/Skills";
 import "../../index.css";
-import { useContext } from "react";
 import { MyContext } from "../Context/Context";
 import { ToastContainer } from "react-toastify";
-import Skills from "../components/skills/Skills";
 
 const Home = () => {
   const { theme } = useContext(MyContext);
 
+  // Fade-in animation for sections
+  const sectionVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  // Stagger children animations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
   return (
-    <div className={`relative ${theme === "dark" ? "bg-gray-800" : "bg-soft-white"}`}>
+    <motion.div
+      className={`relative ${
+        theme === "dark" ? "bg-gray-800" : "bg-soft-white"
+      }`}
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
       {/* Hero + Profile section */}
-      <div className="introduction-profile-background">
-        <div className="content">
-          <Introduction />
-          <Profile />
-        </div>
-      </div>
+      <motion.div
+        className="introduction-profile-background"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <motion.div
+          className="content"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <motion.div variants={sectionVariants}>
+            <Introduction />
+          </motion.div>
+          <motion.div variants={sectionVariants}>
+            <Profile />
+          </motion.div>
+        </motion.div>
+      </motion.div>
 
-      {/* ✅ Add Skills section here */}
-      <Skills />
+      {/* Skills section */}
+      <motion.div
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <Skills />
+      </motion.div>
 
-      {/* Work Process and below */}
-      <div className="pt-30">
+      {/* Work Process section */}
+      <motion.div
+        className="pt-30"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <WorkProcess />
-      </div>
-      <Portfolio />
-      <Profession />
-      <Contact />
+      </motion.div>
+
+      {/* Portfolio section */}
+      <motion.div
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <Portfolio />
+      </motion.div>
+
+      {/* Profession section */}
+      <motion.div
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <Profession />
+      </motion.div>
+
+      {/* Contact section */}
+      <motion.div
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <Contact />
+      </motion.div>
+
       <ToastContainer theme={theme === "dark" ? "dark" : "light"} />
-    </div>
+    </motion.div>
   );
 };
 
